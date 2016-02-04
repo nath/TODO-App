@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  #tasks
+    each task in tasks
+      .checkbox
+        input(type='checkbox', id=task._id, checked=(task.done))
+        label(for=task._id)
+        span=task.text
+        i.fa.fa-times
+  #tasksToAdd
+  button#createTask Add a Task

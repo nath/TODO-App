@@ -1,0 +1,105 @@
+body {
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #0099ff;
+}
+h1 {
+  text-align: center;
+}
+.content {
+  max-width: 1000px;
+  margin: auto;
+  background-color: #eee;
+  padding: 30px;
+  border-radius: 3px;
+  height: 95%;
+}
+.checkbox {
+  height: 30px;
+  position: relative;
+  margin: 10px;
+}
+.checkbox input[type="checkbox"] {
+  visibility: hidden;
+}
+.checkbox label {
+  width: 28px;
+  height: 28px;
+  background-color: #ddd;
+  border-radius: 5px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  cursor: pointer;
+}
+.checkbox label:before {
+  content: '';
+  width: 9px;
+  height: 5px;
+  border: 3px solid white;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  opacity: 0;
+}
+.checkbox input[type="checkbox"]:checked + label:before {
+  opacity: 1;
+}
+.checkbox input[type="checkbox"]:checked + label {
+  background-color: #00cc44;
+}
+.checkbox span {
+  margin-left: 20px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.checkbox input[type="checkbox"]:checked + label + span {
+  text-decoration: line-through;
+}
+.checkbox i {
+  margin-left: 10px;
+}
+#createTask {
+  background-color: #008ae6;
+  color: #fff;
+  border-radius: 5px;
+  padding: 6px 12px;
+  text-align: center;
+  border: 1px solid #007acc;
+  margin: auto;
+  display: block;
+  cursor: pointer;
+}
+#createTask:hover {
+  background-color: #006bb3;
+}
+.newTask {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.newTask input[type="text"] {
+  margin-left: 5px;
+  height: 25px;
+  border-radius: 3px;
+  width: 95%;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+.addTaskButton {
+  display: block;
+  float: right;
+  background-color: #00cc44;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #000;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.addTaskButton:hover {
+  background-color: #009933;
+}
